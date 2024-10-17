@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accets/style.css">
+    <title>Experiência Profissional</title>
+</head>
+
+<body>
+    <div id="experiencia">
+        <h3>Experiência Profissional:</h3>
+        <table>
+            <tr>
+                <th>Período</th>
+                <th>Sidi</th>
+                <th>Experiência</th>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>Sidi</td>
+                <td>Desenvolvedor back-end JAVA.</td>
+            </tr>
+            <tr>
+                <td>20244</td>
+                <td>Sidi</td>
+                <td>Desenvolvedor Frontend</td>
+            </tr>
+            <tr>
+                <td>2024-Atualmente</td>
+                <td>Sidi</td>
+                <td>Designer Sidi</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<!-- Formulário de Contato -->
+<section class="bg-white p-4 mb-4 shadow rounded">
+    <h2 class="section-title">Formulário de Contato</h2>
+    <form id="contactForm" enctype="multipart/form-data" novalidate>
+        <fieldset>
+            <legend>Entre em contato</legend>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">Nome</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Sobrenome</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Seu sobrenome" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="text" class="form-control" id="phone" placeholder="(99) 99999-9999" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="exemplo@dominio.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="language">Língua aplicada no serviço</label>
+                <select class="form-control" id="language" required>
+                    <option>Inglês</option>
+                    <option>Espanhol</option>
+                    <option>Francês</option>
+                    <option>Português (pt-br)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">Upload de protótipo</label>
+                <input type="file" class="form-control-file" id="fileUpload" accept=".pdf, .doc, .docx, .jpeg, .png" required>
+            </div>
+            <div class="form-group">
+                <label>Linguagens preferidas</label>
+                <select multiple class="form-control" id="preferredLanguages">
+                    <option>Python</option>
+                    <option>JavaScript</option>
+                    <option>Java</option>
+                    <option>C#</option>
+                    <option>PHP</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Banco de dados recomendado</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="database" id="mysql" value="MySQL" required>
+                    <label class="form-check-label" for="mysql">MySQL</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="database" id="postgresql" value="PostgreSQL" required>
+                    <label class="form-check-label" for="postgresql">PostgreSQL</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="meetingTime">Turno de preferência para reuniões</label>
+                <select class="form-control" id="meetingTime" required>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bestTime">Melhor horário para reunião</label>
+                <input type="time" class="form-control" id="bestTime" required>
+            </div>
+            <div class="form-group">
+                <label for="deliveryDate">Previsão de entrega</label>
+                <input type="date" class="form-control" id="deliveryDate" required>
+            </div>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </fieldset>
+    </form>
+</section>
+
+<footer>
+    <p>Obrigado pela consideração!</p>
+</footer>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (this.checkValidity() === false) {
+        event.stopPropagation();
+        alert("Por favor, preencha todos os campos obrigatórios.");
+    } else {
+        alert("Formulário enviado com sucesso!");
